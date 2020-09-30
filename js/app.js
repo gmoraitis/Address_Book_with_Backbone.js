@@ -98,7 +98,7 @@ window.ContactManager = {
                     }
                     else {
                         //alert("matched");
-                        conatct.set(attrs);
+                        contact.set(attrs);
                         router.navigate('contacts', true);
                     }
                 });
