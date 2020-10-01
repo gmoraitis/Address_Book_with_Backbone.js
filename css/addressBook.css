@@ -1,4 +1,6 @@
-
+body{
+	background-color: ivory;
+}
 
 .bs-header {
 	position: relative;
@@ -7,16 +9,15 @@
 	color: #cdbfe3;
 	text-align: center;
 	text-shadow: 0 1px 0 rgba(0,0,0,.1);
-	background-color: #6f5499;
-	background-image: url(/images/header.jpg);
-	/* background-image: linear-gradient(to bottom, #563d7c 0%, #6f5499 100%); */
+	background-color:grey;
+	background-image: url(/images/1.jpg);
 	background-repeat: repeat-x;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
   }
   
   .bs-header h1 {
 	margin-top: 0;
-	color: #fff;
+	color:ivory;
   }
   
   .bs-header p {
@@ -56,26 +57,26 @@
   }
   
   .btn-outline {
-	color: grey;
+	color: rgb(75, 76, 87);
 	background-color: transparent;
-	border-color: grey;
+	border-color: rgb(148, 143, 167);
   }
   
   .btn-outline:hover,
   .btn-outline:focus,
   .btn-outline:active {
 	color: #fff;
-	background-color: grey;
+	background-color: rgb(95, 102, 138);
 	border-color: whitesmoke;
   }
   
   a {
-	color: #474647;
+	color: rgb(197, 201, 216);
   }
   
   a:hover,
   a:focus {
-	color: #1d1429;
+	color: #c9c5ce;
   }
   
   a.thumbnail:hover,
@@ -85,4 +86,10 @@
   }
   h4{
 	  color: whitesmoke;
+  }
+
+  .page-footer{
+	background-image: url(/images/1.jpg);
+	  padding: 30px 15px;
+	
   }
