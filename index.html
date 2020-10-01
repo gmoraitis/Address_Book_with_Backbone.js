@@ -2,76 +2,39 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Address Book - George Moraitis</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
-
-  <!-- Custom styles for this template -->
-  <link href="css/address_book.css" rel="stylesheet">
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Address Book</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/addressBook.css" rel="stylesheet">
 </head>
 
 <body>
-
-  <!-- Navigation -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <header class="bs-header">
     <div class="container">
-      <a class="navbar-brand" href="index.html">George Moraitis - Address Book</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#book">Contacts</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#info">Project Information</a>
-          </li>
-      </div>
-  </nav>
-
-
-  <!-- Jumbotron -->
-  <header>
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4" id="color">Address Book </h1>
-        <p class="lead" id="color">This is a small application to represent an address book with backbone.js.
-        </p>
-      </div>
+      <h1>Address Book</h1>
+      <h4>With BackboneJS</h4>
     </div>
   </header>
-
-  <!-- Contacts -->
-
   <div class="container">
     <div class="row">
       <div class="col-xs-12 main-container">
       </div>
     </div>
+  </div>
 
-    <script type="text/template" id="tpl-contacts">
+  <script type="text/template" id="tpl-contacts">
       <h2 class="page-header text-center">List of Contacts</h2>
       <p class="text-center">
-        <a href="#contacts/new" class="btn btn-lg btn-outline">Add Employee</a>
+        <a href="#contacts/new" class="btn btn-lg btn-outline">Add Contact</a>
       </p>
       <ul class="media-list row contacts-container"></ul>
     </script>
 
-    <script type="text/template" id="tpl-contact">
+  <script type="text/template" id="tpl-contact">
       <div class="thumbnail">
-        <img class="media-object" src="assets/<%- avatar %>">
+        <img class="media-object" src="images/<%- avatar %>">
       </div>
       <div class="media-heading">
         <h3>
@@ -95,10 +58,8 @@
       <hr>
     </script>
 
-    <script type="text/template" id="tpl-new-contact">
-
+  <script type="text/template" id="tpl-new-contact">
       <h2 class="page-header text-center"><%= isNew ? 'Create' : 'Edit' %> Contact </h2>
-
       <form role="form" class="form-horizontal contact-form">
         <div class="form-group">
           <label class="col-sm-4 control-label">Full name:</label>
@@ -127,149 +88,62 @@
           </div>
         </div>
       </form>
-
-      <!-- new form -->
-<h2 class="page-header text-center"><%= isNew ? 'Create' : 'Edit' %> Contact </h2>
-      <form>
-
-        <div class="form-group form-horizontal contact-form">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-       
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="submit" class="btn btn-primary">Cancel</button>
-
-      </form>
-
-
-      
     </script>
 
-    <!-- Contacts -->
-    <div class="container">
-
-      <!-- Marketing Icons Section -->
-      <div class="row">
-        <!-- Card 1 -->
-        <div class="col-lg-4 mb-4">
 
 
 
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-lg-4 mb-4">
-
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col-lg-4 mb-4">
-
-        </div>
-
-      </div>
-      <!-- /.row -->
-
-
-
-
-
-
-
-      <!-- Project Information Section -->
-      <div class="row" id="info">
-        <div class="col-lg-6">
-          <h2>Modern Business Features</h2>
-          <p>The Modern Business template by Start Bootstrap includes:</p>
-          <ul>
-            <li>
-              <strong>Bootstrap v4</strong>
-            </li>
-            <li>jQuery</li>
-            <li>Font Awesome</li>
-            <li>Working contact form with validation</li>
-            <li>Unstyled page elements for easy customization</li>
-          </ul>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id
-            reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum
-            ducimus unde.</p>
-        </div>
-        <div class="col-lg-6">
-          <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
-        </div>
-      </div>
-      <!-- /.row -->
-
-      <hr>
+  <!-- Footer -->
+  <footer class="page-footer font-small">
+    <div class="footer-copyright text-center py-3">2020
+      <a href="https://gmoraitis.github.io/"> George Moraitis</a>
     </div>
-    <!-- /.container -->
+  </footer>
+  <!-- Footer -->
 
 
-</div>
-
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
-      </div>
-      <!-- /.container -->
-    </footer>
-
-    <!-- Bootstrap core JavaScript  Underscore.js Backbone.js-->
-    <script src="vendor/jquery/jquery.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/lib/underscore.js"></script>
-    <script src="js/lib/backbone.js"></script>
+  <script src="js/lib/jquery.js"></script>
+  <script src="js/lib/underscore.js"></script>
+  <script src="js/lib/backbone.js"></script>
 
 
-    <script src="js/app.js"></script>
-    <script src="js/models/contact.js"></script>
-    <script src="js/collections/contacts.js"></script>
-    <script src="js/views/contact.js"></script>
-    <script src="js/views/contacts.js"></script>
-    <script src="js/views/contactForm.js"></script>
-    <script src="js/routers/router.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/models/contact.js"></script>
+  <script src="js/collections/contacts.js"></script>
+  <script src="js/views/contact.js"></script>
+  <script src="js/views/contacts.js"></script>
+  <script src="js/views/contactForm.js"></script>
+  <script src="js/routers/router.js"></script>
 
-
-
-    <script>
-      $(function () {
-        ContactManager.start({
-          contacts: [
-            {
-              id: 1,
-              name: 'Christian Nwamba',
-              avatar: '',
-              tel: '651-603-1723',
-              email: 'chris@scotch.io'
-            },
-            {
-              id: 2,
-              name: 'Bukola Ayodeji',
-              avatar: '',
-              tel: '513-307-5859',
-              email: 'bukolayodeji@nairabet.com'
-            },
-            {
-              id: 3,
-              name: 'Rick Ross',
-              avatar: '',
-              tel: '918-774-0199',
-              email: 'ross@auth0.com'
-            },
-          ]
-        });
+  <script>
+    $(function () {
+      ContactManager.start({
+        contacts: [
+          {
+            id: 1,
+            name: 'Christian Nwamba',
+            avatar: '',
+            tel: '651-603-1723',
+            email: 'chris@scotch.io'
+          },
+          {
+            id: 2,
+            name: 'Bukola Ayodeji',
+            avatar: '',
+            tel: '513-307-5859',
+            email: 'bukolayodeji@nairabet.com'
+          },
+          {
+            id: 3,
+            name: 'Rick Ross',
+            avatar: '',
+            tel: '918-774-0199',
+            email: 'ross@auth0.com'
+          },
+        ]
       });
-    </script>
-
+    });
+  </script>
 </body>
 
 </html>
