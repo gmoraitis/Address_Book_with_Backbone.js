@@ -11,19 +11,32 @@
 </head>
 
 <body>
+  <!-- Header -->
   <header class="bs-header">
     <div class="container">
       <h1>Address Book</h1>
       <h4>With BackboneJS</h4>
     </div>
   </header>
+
+  <!-- Main App area -->
   <div class="container">
     <div class="row">
+      <!-- Here is where we see our script -->
       <div class="col-xs-12 main-container">
       </div>
     </div>
   </div>
 
+  <!-- Footer Section -->
+  <footer class="page-footer font-small">
+    <div class="footer-copyright text-center py-4">
+      <a href="https://gmoraitis.github.io/"> George Moraitis</a>
+    </div>
+  </footer>
+
+
+  <!-- Main App Script which we can see throught Main App area -->
   <script type="text/template" id="tpl-contacts">
       <h2 class="page-header text-center">List of Contacts</h2>
       <p class="text-center">
@@ -32,6 +45,7 @@
       <ul class="media-list row contacts-container"></ul>
     </script>
 
+  <!-- One contact -->
   <script type="text/template" id="tpl-contact">
       <div class="thumbnail">
         <img class="media-object" src="images/<%- avatar %>">
@@ -58,6 +72,7 @@
       <hr>
     </script>
 
+  <!-- Form area -->
   <script type="text/template" id="tpl-new-contact">
       <h2 class="page-header text-center"><%= isNew ? 'Create' : 'Edit' %> Contact </h2>
       <form role="form" class="form-horizontal contact-form">
@@ -89,24 +104,14 @@
         </div>
       </form>
     </script>
+  <!-- End of main script -->
 
-
-
-
-  <!-- Footer -->
-  <footer class="page-footer font-small">
-    <div class="footer-copyright text-center py-4">
-      <a href="https://gmoraitis.github.io/"> George Moraitis</a>
-    </div>
-  </footer>
-  <!-- Footer -->
-
-
+  <!-- Dependencies -->
   <script src="js/lib/jquery.js"></script>
   <script src="js/lib/underscore.js"></script>
   <script src="js/lib/backbone.js"></script>
 
-
+  <!-- Files -->
   <script src="js/app.js"></script>
   <script src="js/models/contact.js"></script>
   <script src="js/collections/contacts.js"></script>
@@ -115,6 +120,7 @@
   <script src="js/views/contactForm.js"></script>
   <script src="js/routers/router.js"></script>
 
+  <!-- Our Startup script -->
   <script>
     $(function () {
       ContactManager.start({
@@ -145,5 +151,6 @@
     });
   </script>
 </body>
+
 
 </html>
