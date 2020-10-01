@@ -1,5 +1,5 @@
 body{
-	background-color: ivory;
+	background-color:whitesmoke;
 }
 
 .bs-header {
@@ -71,7 +71,7 @@ body{
   }
   
   a {
-	color: rgb(197, 201, 216);
+	color: rgb(179, 179, 179);
   }
   
   a:hover,
