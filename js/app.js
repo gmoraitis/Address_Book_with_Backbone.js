@@ -53,8 +53,8 @@ window.ContactManager = {
 
                     var phone = attrs.tel;
                     console.log(phone);
-                    var pattern = /^(\+?)(\d{2,4})(\s?)(\-?)((\(0\))?)(\s?)(\d{2})(\s?)(\-?)(\d{3})(\s?)(\-?)(\d{2})(\s?)(\-?)(\d{2})/
-
+                    // var pattern = /^(\+?)(\d{2,4})(\s?)(\-?)((\(0\))?)(\s?)(\d{2})(\s?)(\-?)(\d{3})(\s?)(\-?)(\d{2})(\s?)(\-?)(\d{2})$/
+                    var pattern = /^\+41(\s*\d\s*){9}$/
 
                     //Check the telephone number
                     if (!pattern.test(phone)) {
@@ -86,8 +86,9 @@ window.ContactManager = {
                 editContactForm.on('form:submitted', function (attrs) {
                     var phone = attrs.tel;
                     console.log(phone);
-                    var pattern = /^(\+?)(\d{2,4})(\s?)(\-?)((\(0\))?)(\s?)(\d{2})(\s?)(\-?)(\d{3})(\s?)(\-?)(\d{2})(\s?)(\-?)(\d{2})/
-
+                    //var pattern = /^(\+?)(\d{2,4})(\s?)(\-?)((\(0\))?)(\s?)(\d{2})(\s?)(\-?)(\d{3})(\s?)(\-?)(\d{2})(\s?)(\-?)(\d{2})/
+                    var pattern = /^\+41(\s*\d\s*){9}$/
+                    
                     //Regex Validation Info
                     //https://www.regexlib.com/REDetails.aspx?regexp_id=2421
                     //https://stackoverflow.com/questions/32004990/javascript-regular-expression-validation
