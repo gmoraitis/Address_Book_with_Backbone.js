@@ -6,7 +6,6 @@ ContactManager.Views.ContactForm = Backbone.View.extend({
         'submit .contact-form': 'onFormSubmit'
     },
    
-
     render: function () {
         var html = this.template(_.extend(this.model.toJSON(), {
             isNew: this.model.isNew()
